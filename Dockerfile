@@ -4,7 +4,7 @@ MAINTAINER Stefan Kreuter <kreuter@gigatec.de>
 
 RUN usermod -u 500 www-data && groupmod -g 500 www-data
 
-RUN a2enmod rewrite
+RUN a2enmod rewrite && a2enmod expires && a2enmod headers
 
 RUN rm -rf /var/www/html/*
 
